@@ -36,6 +36,9 @@ procinfo = {git = "https://github.com/azdlowry/procinfo-rs.git", optional = true
 [target.'cfg(target_os = "android")'.dependencies]
 procinfo = {git = "https://github.com/azdlowry/procinfo-rs.git", optional = true}
 
+[target.'cfg(target_os = "android")'.dependencies]
+procinfo = {version = "0.3", optional = true}
+
 [dev-dependencies]
 getopts = "0.2"
 hyper = {version = "0.9", default-features = false}
