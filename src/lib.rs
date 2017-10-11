@@ -25,7 +25,7 @@ extern crate lazy_static;
 extern crate hyper;
 #[cfg(any(feature="nightly", feature="push", feature="process"))]
 extern crate libc;
-#[cfg(all(feature = "process", target_os="linux"))]
+#[cfg(all(feature = "process", any(target_os="linux", target_os="android")))]
 extern crate procinfo;
 #[macro_use]
 extern crate cfg_if;
@@ -51,7 +51,7 @@ mod atomic64;
 /// Protocol buffers format of metrics.
 #[path="../proto/metrics.rs"]
 pub mod proto;
-#[cfg(all(feature = "process", target_os="linux"))]
+#[cfg(all(feature = "process", any(target_os="linux", target_os="android")))]
 pub mod process_collector;
 pub mod local;
 

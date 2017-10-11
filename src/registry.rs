@@ -220,7 +220,7 @@ impl Registry {
 }
 
 cfg_if! {
-    if #[cfg(all(feature = "process", target_os="linux"))] {
+    if #[cfg(all(feature = "process", any(target_os="linux", target_os="android")))] {
         fn register_default_process_collector(reg: &Registry) -> Result<()> {
             use process_collector::ProcessCollector;
 
