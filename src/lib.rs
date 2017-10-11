@@ -58,6 +58,8 @@ pub mod process_collector;
 /// Protocol buffers format of metrics.
 #[path = "../proto/metrics.rs"]
 pub mod proto;
+#[cfg(all(feature = "process", any(target_os="linux", target_os="android")))]
+pub mod process_collector;
 
 pub mod local {
     /*!
