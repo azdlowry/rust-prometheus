@@ -44,6 +44,9 @@ cfg-if = "0.1"
 [target.'cfg(target_os = "linux")'.dependencies]
 procinfo = {version = "0.3", optional = true}
 
+[target.'cfg(target_os = "android")'.dependencies]
+procinfo = {version = "0.3", optional = true}
+
 [dependencies.hyper]
 version = "0.9"
 # disable hyper ssl
