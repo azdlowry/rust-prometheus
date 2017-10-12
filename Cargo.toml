@@ -42,10 +42,10 @@ libc = {version = "0.2", optional = true}
 cfg-if = "0.1"
 
 [target.'cfg(target_os = "linux")'.dependencies]
-procinfo = {version = "*", optional = true}
+procinfo = {git = "https://github.com/pingcap/rust-prometheus/procinfo-rs.git", optional = true}
 
 [target.'cfg(target_os = "android")'.dependencies]
-procinfo = {version = "*", optional = true}
+procinfo = {git = "https://github.com/pingcap/rust-prometheus/procinfo-rs.git", optional = true}
 
 [dependencies.hyper]
 version = "0.9"
