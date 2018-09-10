@@ -53,8 +53,6 @@ mod registry;
 mod value;
 mod vec;
 
-#[cfg(all(feature = "process", any(target_os="linux", target_os="android")))]
-pub mod process_collector;
 /// Protocol buffers format of metrics.
 #[path = "../proto/metrics.rs"]
 pub mod proto;
